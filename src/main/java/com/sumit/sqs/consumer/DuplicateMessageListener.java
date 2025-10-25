@@ -7,10 +7,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @Component
 @Slf4j
-public class MessageListener {
+public class DuplicateMessageListener {
 	
 	@SqsListener("devops-queue")
     public void receiveMessage(String message) {
-        log.info("📬 Received message from SQS: " + message);
+        log.info("DuplicateMessageListener Received message from SQS: " + message);
     }
 }
